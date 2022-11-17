@@ -1,0 +1,18 @@
+name: slimbook-service
+version: 0.3.3
+summary: Cross-Platform Slimbook Service
+description: |
+  Service to get desktop notifications from your device:
+  * Allow double tap enable/disable touchpad
+  * Send notifications depending on your device.
+base: core20
+confinement: devmode
+
+parts:
+  slimbook-service:
+    plugin: dump
+    source: https://launchpad.net/~slimbook/+archive/ubuntu/slimbook/+sourcefiles/slimbook/0.3.3/slimbook_0.3.3.tar.xz
+
+apps:
+  slimbook-service:
+    command: slimbookindicator
